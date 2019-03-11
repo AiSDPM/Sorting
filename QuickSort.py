@@ -19,6 +19,8 @@ def Partition (A, p, r):
             i +=1
         if i < j:
             A[i], A[j] = A[j], A[i]
+            i +=1
+            j -=j
         else:
             return j
 
