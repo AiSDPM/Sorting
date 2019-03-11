@@ -5,7 +5,6 @@ def QuickSortMain(A):
 def QuickSort(A, p, r):
     if p < r:
         q = Partition(A, p, r)
-        print(A)
         QuickSort(A, p, q)
         QuickSort(A, q+1, r)
 
@@ -19,7 +18,6 @@ def Partition (A, p, r):
         while A[i] < x:
             i +=1
         if i < j:
-            print(i,j)
             A[i], A[j] = A[j], A[i]
         else:
             return j
