@@ -9,7 +9,7 @@ def HeapSort (A):
 
 def BuildHeap(A):
     heapsize = len(A)
-    for i in range (len(A)//2),-1,-1):
+    for i in range ((len(A)//2),-1,-1):
         Heapify(A, i, heapsize)
 
 def Heapify(A, i, heapsize):
