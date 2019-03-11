@@ -24,5 +24,5 @@ def Partition (A, p, r):
         else:
             return j
 
-Tablica = [1, 4, 6, 7, 36, 346, 3, 57, 34, -503, 37,1] #poprawić by działao dla rownych
+Tablica = [1, 4, 6, 7, 36, 346, 3, 57, 34, -503, 37,1] 
 print(QuickSortMain(Tablica))
