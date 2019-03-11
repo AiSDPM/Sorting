@@ -20,7 +20,7 @@ def Partition (A, p, r):
         if i < j:
             A[i], A[j] = A[j], A[i]
             i +=1
-            j -=j
+            j -=1
         else:
             return j
 
