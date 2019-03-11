@@ -1,6 +1,5 @@
 def SelectionSort(A):
     for i in range(len(A)-1, 0, -1):
-        print(A)
         maks = i
         for j in range(i, -1, -1):
             if A[j] > A[maks]:
