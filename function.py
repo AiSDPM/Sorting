@@ -77,6 +77,8 @@ def SelectionSort(A):
     return A
 
 insList = []
+greaterList = [-10000]
+lowerList = []
 heaList = []
 merList = []
 selList = []
@@ -85,6 +87,9 @@ n = 1
 for j in range(15):
     for i in range(1000 * n):
         insList.append(random.randint(0,300))
+        greaterList.apend(greaterList[-1] + random.randint(0,10))
+lowerList = copy.copy(greaterList)
+lowerList.reverse()      
 
     heaList = copy.copy(insList)
     merList = copy.copy(insList)
