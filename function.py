@@ -92,7 +92,8 @@ n = 1
 for j in range(15):
     insList = []
     greaterList = [-10000]
-    for i in range(1000 * n):
+
+    for i in range(500 * n + 500):
         insList.append(random.randint(0, 300))
         greaterList.append(greaterList[-1] + random.randint(0, 10))
 
