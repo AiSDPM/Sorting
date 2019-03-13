@@ -3,24 +3,27 @@ import random
 import copy
 import time
 
-def HeapSort (A):
+
+def HeapSort(A):
     BuildHeap(A)
     heapsize = len(A)
-    for i in range(len(A)-1, 0, -1):
+    for i in range(len(A) - 1, 0, -1):
         A[0], A[i] = A[i], A[0]
-        heapsize -=1
+        heapsize -= 1
         Heapify(A, 0, heapsize)
     return A
 
+
 def BuildHeap(A):
     heapsize = len(A)
-    for i in range ((len(A)//2),-1,-1):
+    for i in range((len(A) // 2), -1, -1):
         Heapify(A, i, heapsize)
 
+
 def Heapify(A, i, heapsize):
-    l = 2*i+1
-    r = 2*i+2
-    if( l < heapsize) and (A[l]> A[i]):
+    l = 2 * i + 1
+    r = 2 * i + 2
+    if (l < heapsize) and (A[l] > A[i]):
         largest = l
     else:
         largest = i
@@ -67,8 +70,9 @@ def MergeSort(A, first, last, B):
         A[k] = B[k]
     return A
 
+
 def SelectionSort(A):
-    for i in range(len(A)-1, 0, -1):
+    for i in range(len(A) - 1, 0, -1):
         maks = i
         for j in range(i, -1, -1):
             if A[j] > A[maks]:
@@ -76,8 +80,9 @@ def SelectionSort(A):
         A[maks], A[i] = A[i], A[maks]
     return A
 
-insList = []
-greaterList = [-10000]
+
+
+
 lowerList = []
 heaList = []
 merList = []
@@ -85,12 +90,14 @@ selList = []
 
 n = 1
 for j in range(15):
+    insList = []
+    greaterList = [-10000]
     for i in range(1000 * n):
-        insList.append(random.randint(0,300))
-        greaterList.apend(greaterList[-1] + random.randint(0,10))
-        
+        insList.append(random.randint(0, 300))
+        greaterList.append(greaterList[-1] + random.randint(0, 10))
+
     lowerList = copy.copy(greaterList)
-    lowerList.reverse()      
+    lowerList.reverse()
 
     heaList = copy.copy(insList)
     merList = copy.copy(insList)
