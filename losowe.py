@@ -95,7 +95,7 @@ for j in range(15):
     greaterList = [-10000]
 
     for i in range(500 * n + 500):
-        insList.append(random.randint(0, 300))
+        insList.append(random.randint(0, 3000))
         greaterList.append(greaterList[-1] + random.randint(0, 10))
 
     lowerList = copy.copy(greaterList)
