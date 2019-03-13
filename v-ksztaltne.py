@@ -95,7 +95,7 @@ for j in range(15):
     lowerList.reverse()
 
     insList = lowerList
-    insList.append(greaterList)
+    insList += greaterList
     heaList = copy.copy(insList)
     merList = copy.copy(insList)
     selList = copy.copy(insList)
