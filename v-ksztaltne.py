@@ -102,7 +102,7 @@ for j in range(15):
     InsertSort(insList)
     endTime = time.time()
     Time = endTime - startTime
-     logfile.write("InsertSort " + str(Time)+ "\n")
+    logfile.write("InsertSort " + str(Time)+ "\n")
 
     startTime = time.time()
     HeapSort(heaList)
