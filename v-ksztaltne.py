@@ -81,7 +81,7 @@ def SelectionSort(A):
     return A
 
 n = 1
-
+logfile = open('v-ksztaltna.txt', 'w')
 for j in range(15):
     insList = []
     for i in range(1000 * n):
@@ -102,25 +102,26 @@ for j in range(15):
     InsertSort(insList)
     endTime = time.time()
     Time = endTime - startTime
-    print("InsertSort " + str(Time))
+     logfile.write("InsertSort " + str(Time)+ "\n")
 
     startTime = time.time()
     HeapSort(heaList)
     endTime = time.time()
     Time = endTime - startTime
-    print("HeapSort " + str(Time))
+    logfile.write("HeapSort " + str(Time)+ "\n")
 
     startTime = time.time()
     MergeSortMain(merList)
     endTime = time.time()
     Time = endTime - startTime
-    print("MergeSort " + str(Time))
+    logfile.write("MergeSort " + str(Time)+ "\n")
 
     startTime = time.time()
     SelectionSort(selList)
     endTime = time.time()
     Time = endTime - startTime
-    print("SelectionSort " + str(Time))
+    logfile.write("SelectionSort " + str(Time) + "\n")
     print(str(
         n) + ".    ----------------------------------------------------------------------------------------------------------")
     n += 1
+logfile.close()
